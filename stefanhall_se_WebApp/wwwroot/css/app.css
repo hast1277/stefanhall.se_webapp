@@ -1,0 +1,579 @@
+﻿h1 {
+	text-align:center;
+}
+
+#cookie-law {
+    max-width: 940px;
+    background: #EEEADD;
+    margin: 10px auto 0;
+    border-radius: 17px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+}
+
+    #cookie-law p {
+        padding: 10px;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+        color: #682008;
+        margin: 0;
+    }
+
+#mainBody {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: url('/images/preikestolen.JPG') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#USABody {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: url('../img/newyork.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#RunkeeperBody{
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: url('../img/risveden.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#KnowledgeBody{
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: url('../img/knowledge.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#FamilyBody {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: url('../img/family_tree.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#LoginBackground {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: url('../img/login_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#knowledgeLink{
+    color: black;
+}
+
+#main{
+    overflow:scroll;
+    height: 700px;
+}
+
+#main-content{
+	box-sizing: border-box;
+	width: 50%;
+	margin: auto;
+	clear: right;
+	background-color: #eee;
+	border: 5px solid #333;
+	padding: 20px 40px 20px 40px;
+	font-size: 1.5em;
+}
+
+#footer{ 
+    background-color:black;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:50px;
+    width:100%;
+}
+
+#divPages{
+    background-color:white;
+    text-align:center;
+}
+
+#map{
+    height: 400px;
+    width: 100%;
+}
+
+.white-label {
+    color: #F0F8FF
+}
+
+.form {
+    margin: auto;
+    width: 40em;
+    border: 0.25em solid #000000;
+    padding: 30px;
+    background-color: #D3D3D3;
+}
+
+.formFamily {
+    margin: auto;
+    width: 50em;
+    border: 0.25em solid #000000;
+    padding: 30px;
+    background-color: #D3D3D3;
+}
+
+
+.tdQuarter{
+  width: 25%; 
+}
+
+.tableContent{
+	width: 100%;
+	display: block;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font: italic bold 12px/30px Georgia, serif;
+}
+
+.centerText{
+  text-align: center;
+}
+
+.searchbar{
+    text-align: right;
+}
+
+#selectTag{
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+#Comment {
+    width: 400px;
+    height: 100px;
+}
+
+.centerThis {
+    margin-left: auto;
+    margin-right: auto;
+    width: 64%;
+}
+
+#presentation{
+	width:40%;
+	padding:30px;
+	float: left;
+	clear: right;
+	border-style:inset;
+	border-width:5px;
+	border-color:grey;
+}
+
+#imgTommy{
+	float:left;
+	margin-right:30px;
+}
+
+#imgIngalill{
+	float:right;
+	margin-left:30px;
+}
+
+#contact{
+	margin-top:50px;
+}
+
+#lblName {
+    margin-right:100%;
+}
+
+
+#topSeparator {
+    margin-bottom: 20px;
+}
+
+#bottomSeparator{
+    margin-top: 20px;
+}
+
+img {
+    border:0;
+}
+
+.userButton{
+    margin-top: 5px;
+}
+
+twitter-share-button{
+    margin-top: 10px;
+}
+
+
+
+.postTitle{
+    margin:auto;
+    text-align: left;
+    width: 700px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Palatino Linotype", Palatino;
+    color: black;
+}
+
+.postContainer{
+    width: 700px;
+    margin: 0 auto 50px auto;
+}
+
+.postTabs{
+    color: #ffffff;
+    float: left;
+    font-size: 12px;
+}
+
+.dateTab{
+    margin-top: 20px;
+    width: 60px;
+    padding: 5px;
+    background: #303030;
+}
+
+.day {
+    font-size: 2em;
+}
+
+.commentsTab{
+    margin-top: 20px;
+    width: 60px;
+    padding: 5px;
+    background: #217aa6;
+}
+
+.postContent {
+    padding: 15px;
+    width: 650px;
+    margin-left: 35px;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.postBody{
+    text-align: left;
+    line-height: 1.5em;
+    width: 600px;
+}
+
+.tagList{
+    float: left;
+}
+
+.linkList{
+    text-align: right;
+}
+
+.comment{
+    text-align: left;
+    color: #000000;
+    background: #ffffff;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.commentName{
+    font-style: italic;
+}
+
+.commentBody{
+    margin: 5px;
+}
+
+.commentTime{
+    font-style: italic;
+    text-align: right;
+    font-size: 10px;
+}
+
+.postedPhoto{
+    width: 600px;
+/*    height: 300px;*/
+}
+
+.sum {
+    font-weight: bold;
+}
+
+.imageButton{
+     background: url(../img/icons/magnify.png) no-repeat top left;
+     width: 30px;
+     height: 21px;
+     text-indent: -9999px; /* hides the link text */
+}
+
+.tblPersons, th, td {
+    border: 1px solid black;
+} 
+
+.tblPersons{
+    border-collapse: collapse;
+}
+
+.tblPersonDetails, td{
+    padding-right:10px;
+    border:none;
+}
+
+/* Nedanstående är kopierat från stefanhall.se/business-casual.css */
+
+/*!
+ * Start Bootstrap - Business Casual (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+/*body {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: url('../img/bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.25em;
+    line-height: 1.6;
+    color: #000;
+}
+
+hr {
+    max-width: 400px;
+    border-color: #999999;
+}
+
+.brand,
+.address-bar {
+    display: none;
+}
+
+.navbar-brand {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.navbar-nav {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.img-full {
+    min-width: 100%;
+}
+
+.brand-before,
+.brand-name {
+    text-transform: capitalize;
+}
+
+.brand-before {
+    margin: 15px 0;
+}
+
+.brand-name {
+    margin: 0;
+    font-size: 4em;
+}
+
+.tagline-divider {
+    margin: 15px auto 3px;
+    max-width: 250px;
+    border-color: #999999;
+}
+
+.box {
+    margin-bottom: 20px;
+    padding: 30px 15px;
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+.intro-text {
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.img-border {
+    float: none;
+    margin: 0 auto 0;
+    border: #999999 solid 1px;
+}
+
+.img-left {
+    float: none;
+    margin: 0 auto 0;
+}
+
+footer {
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+footer p {
+    margin: 0;
+    padding: 50px 0;
+}
+
+@media screen and (min-width:768px) {
+
+    .brand {
+        display: inherit;
+        margin: 0;
+        padding: 30px 0 10px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 5em;
+        font-weight: 700;
+        line-height: normal;
+        color: #fff;
+    }
+
+    .brandFamily {
+        display: inherit;
+        margin: 0;
+        padding: 30px 0 10px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 5em;
+        font-weight: 700;
+        line-height: normal;
+        color: black;
+    }
+
+    .top-divider {
+        margin-top: 0;
+    }
+
+    .img-left {
+        float: left;
+        margin-right: 25px;
+    }
+
+    .address-bar {
+        display: inherit;
+        margin: 0;
+        padding: 0 0 40px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        text-transform: uppercase;
+        font-size: 1.25em;
+        font-weight: 400;
+        letter-spacing: 3px;
+        color: #fff;
+    }
+
+    .navbar {
+        border-radius: 0;
+    }
+
+    .navbar-header {
+        display: none;
+    }
+
+    .navbar {
+        min-height: 0;
+    }
+
+    .navbar-default {
+        border: none;
+        background: #fff;
+        background: rgba(255,255,255,0.9);
+    }
+
+    .navbar-nav>li>a {
+        line-height: normal;
+    }
+
+    .navbar-nav {
+        display: table;
+        float: none;
+        margin: 0 auto;
+        table-layout: fixed;
+        font-size: 1.25em;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .box:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+/* Nedanstående är flyttat från bootstrap.min.css*/
+
+.jumbotron{
+	padding-top:30px;
+	padding-bottom:30px;
+	margin-bottom:30px;
+	color:inherit;
+	background-color:#eee
+}
+
+.jumbotron .h1,.jumbotron h1{
+	color:inherit
+}
+
+.jumbotron p{
+	margin-bottom:15px;
+	font-size:21px;
+	font-weight:200
+}
+
+.jumbotron>hr{
+	border-top-color:#d5d5d5
+}
+
+.container .jumbotron,.container-fluid .jumbotron{
+	padding-right:15px;
+	padding-left:15px;
+	border-radius:6px
+}
+
+.jumbotron .container{
+	max-width:100%
+}
+
+@media screen and (min-width:768px){
+	.jumbotron{
+		padding-top:48px;
+		padding-bottom:48px
+	}
+	.container .jumbotron,.container-fluid .jumbotron{
+		padding-right:60px;
+		padding-left:60px
+	}
+	.jumbotron .h1,.jumbotron h1{
+		font-size:63px
+	}
+}
+
+/*Nedanstående har jag hittat på själv  :P */
+
+.nav-background{
+	padding-top:10px;
+	margin-bottom:30px;
+    color:inherit;
+	background-color:#eee
+}
