@@ -28,31 +28,31 @@
 
 #USABody {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url('../img/newyork.jpg') no-repeat center center fixed;
+    background: url('../images/newyork.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 #RunkeeperBody{
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url('../img/risveden.jpg') no-repeat center center fixed;
+    background: url('../images/risveden.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 #KnowledgeBody{
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url('../img/knowledge.jpg') no-repeat center center fixed;
+    background: url('../images/knowledge.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 #FamilyBody {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url('../img/family_tree.jpg') no-repeat center center fixed;
+    background: url('../images/family_tree.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 #LoginBackground {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url('../img/login_background.jpg') no-repeat center center fixed;
+    background: url('../images/login_background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -297,7 +297,7 @@ twitter-share-button{
 }
 
 .imageButton{
-     background: url(../img/icons/magnify.png) no-repeat top left;
+     background: url(../images/icons/magnify.png) no-repeat top left;
      width: 30px;
      height: 21px;
      text-indent: -9999px; /* hides the link text */
@@ -326,7 +326,7 @@ twitter-share-button{
 
 /*body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url('../img/bg.jpg') no-repeat center center fixed;
+    background: url('../images/bg.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

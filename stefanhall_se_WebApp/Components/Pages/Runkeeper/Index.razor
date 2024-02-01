@@ -1,6 +1,81 @@
-﻿@page "/runkeeper"
+﻿
+@page "/runkeeper"
+@using System.Net.Http
 <h3>Runkeeper</h3>
+    <body id="RunkeeperBody">
 
-@code {
+        <div class="container">
+            <div class="row">
+                <div class="box">
+                    <div class="col-lg-12 text-center">
+                        <div id="carousel-example-generic" class="carousel slide">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators hidden-xs">
+                            </ol>
+                            <!-- Wrapper for slides -->
 
+                            <div class="carousel-inner">
+                            </div>
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="icon-prev"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="icon-next"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            console.log("Hello from Runkeeper");
+        </script>
+
+
+        <!-- jQuery -->
+        <script src="/Scripts/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="/Scripts/bootstrap.min.js"></script>
+        <!-- Script to Activate the Carousel -->
+
+@*         <script type="text/javascript">
+            $(document).ready(function () {
+                @foreach(var activityModel in Model) {
+                    string runKeeperId = Regex.Match(activityModel.uri, @"\d+").Value;
+            double dblMinutes = activityModel.Duration / 60;
+            int intMinutes = (int)Math.Floor(dblMinutes);
+            int seconds = activityModel.Duration % 60;
+            double dblKilometers = activityModel.total_distance / 1000;
+            //double dblPace = dblMinutes / dblKilometers;
+            int intPaceMinutes = (int)Math.Floor(activityModel.pace);
+            float fltPaceSeconds = activityModel.pace % 1;
+            int intPaceSeconds = (int)Math.Floor(fltPaceSeconds * 60);
+            int intKilometers = (int)Math.Floor(dblKilometers);
+            float meters = activityModel.total_distance % 1000;
+            string typeOfActivity = activityModel.type;
+            <Text>
+                $('.carousel-inner').append('<div class="item"><h2>@activityModel.start_time.ToString("dd MMM yyyy HH:mm").ToUpper()</h2> <b>Typ: </b>@typeOfActivity<br/><b>Sträcka: </b>@intKilometers km och @Math.Round(meters) meter<br /><b>Tid: </b>@intMinutes minuter och @seconds sekunder<br /><b>Tempo: </b>@intPaceMinutes minuter och @intPaceSeconds sekunder / km <br /><b>Förbrukade kalorier: </b>@activityModel.total_calories<br /><a href = "@Href("~/Runkeeper/Details/" + runKeeperId)">Karta</a></div>')
+                    </Text>
+
+    
+                $('.item').first().addClass('active');
+                $('.carousel-indicators > li').first().addClass('active');
+                $('#carousel-example-generic').carousel();
+                });
+        </script> *@
+    </body>
+@code 
+{
+  
+    
+    
+    
+    //webClient.BaseAddress = new Uri("http:api.runkeeper.com/");
+    // webClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "9816c7b034ff44b6817e7c0d68bcb97f");
+
+    // string activitiesAsJson = webClient.GetStringAsync("fitnessActivities?pageSize=88").Result;
+
+    // List<RunkeeperActivity> activities = JsonAdapter.GetActivities(activitiesAsJson);
 }
