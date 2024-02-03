@@ -1,6 +1,11 @@
 ﻿
 @page "/runkeeper"
 @using System.Net.Http
+@using stefanhall_se_WebApp.Shared;
+@using stefanhall_se_WebApp.Services;
+
+@* @attribute [RenderModeInteractiveServer] *@
+@rendermode InteractiveServer
 <h3>Runkeeper</h3>
     <body id="RunkeeperBody">
 
@@ -68,9 +73,16 @@
     </body>
 @code 
 {
-  
-    
-    
+    public RunkeeperActivityList activities { get; set; }    
+    [Inject]
+    public IRunkeeperService runkeeperService { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        activities = await runkeeperService.GetAllActivities();
+    }
+
+ // HttpClient webClient = new HttpClient();
     
     //webClient.BaseAddress = new Uri("http:api.runkeeper.com/");
     // webClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "9816c7b034ff44b6817e7c0d68bcb97f");

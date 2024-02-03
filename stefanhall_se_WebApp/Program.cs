@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using stefanhall_se_WebApp.Components;
 using stefanhall_se_WebApp.Components.Account;
 using stefanhall_se_WebApp.Data;
+using stefanhall_se_WebApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,6 +36,13 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
     .AddDefaultTokenProviders();
 
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
+//services.AddSingleton<MyNewService>();
+builder.Services.AddHttpClient<IRunkeeperService, RunkeeperService>(client =>
+{
+    client.BaseAddress = new Uri("https://api.runkeeper.com/");
+    client.DefaultRequestHeaders.Add("Accept", "application/json");
+    client.DefaultRequestHeaders.Add("Authorization", "Bearer 9816c7b034ff44b6817e7c0d68bcb97f");
+});
 
 var app = builder.Build();
 
