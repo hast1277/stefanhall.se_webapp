@@ -3,6 +3,6 @@
     using stefanhall_se_WebApp.Shared;
     public interface IRunkeeperService
     {
-        Task<RunkeeperActivityList> GetAllActivities();
+        Task<List<RunkeeperActivity>> GetAllActivities();
     }
 }

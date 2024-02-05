@@ -1,15 +1,4 @@
-﻿//using RestSharp.Authenticators;
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Web;
-//using System.Web.Mvc;
-
-//using System.Configuration;
-//using HealthGraphNet;
-//using HealthGraphNet.Models;
-
-using Newtonsoft.Json;
+﻿using CsvHelper.Configuration.Attributes;
 using System.ComponentModel.DataAnnotations;
 
 namespace stefanhall_se_WebApp.Shared
@@ -31,87 +20,87 @@ namespace stefanhall_se_WebApp.Shared
     }
     public class RunkeeperActivity
     {
-        [JsonProperty("utc_offset", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int utc_offset {get; set;}
-        
-        [JsonProperty("Duration", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int Duration { get; set; }
-        
-        [JsonProperty("start_time", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public DateTime start_time { get; set; }
-        
-        [JsonProperty("total_calories", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public float total_calories { get; set; }
-        
-        [JsonProperty("tracking_mode", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public required string tracking_mode { get; set; }
-        
-        [JsonProperty("total_distance", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public float total_distance { get; set; }
-        
-        [JsonProperty("entry_mode", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public required string entry_mode { get; set; }
+        [Name("Activity Id")]
+        public string? ActivityId { get; set; }
 
-        [JsonProperty("has_path", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public bool has_path { get; set; }
+        [Name("Date")]
+        public DateTime Date { get; set; }
 
-        [JsonProperty("share", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public required string share { get; set; }
+        [Name("Type")]
+        public string? Type { get; set; }
 
-        [JsonProperty("source", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public required string source { get; set; }
+        [Name("Route Name")]
+        public string? RouteName { get; set; }
 
-        [JsonProperty("type", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public required string type { get; set; }
+        [Name("Distance (km)")]
+        public double Distance { get; set; }
 
-        [JsonProperty("uri", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public required string uri { get; set; }
+        [Name("Duration")]
+        public string? Duration { get; set; }
 
-        [JsonProperty("pace", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public float pace { get; set; }
+        [Name("Average Pace")]
+        public string? AveragePace { get; set; }
 
-        [JsonProperty("climb", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public required string climb { get; set; }
+        [Name("Average Speed (km/h)")]
+        public string? AverageSpeed { get; set; }
+
+        [Name("Calories Burned")]
+        public float CaloriesBurned { get; set; }
+
+        [Name("Climb (m)")]
+        public int Climb { get; set; }
+
+        [Name("Average Heart Rate (bpm)")]
+        public string? AverageHeartRate { get; set; }
+
+        [Name("Friend's Tagged")]
+        public string? FriendsTagged { get; set; }
+
+        [Name("Notes")]
+        public string? Notes { get; set; }
+
+        [Name("GPX File")]
+        public string? GPXFile { get; set; }
     }
 
-    public class RunkeeperActivityList
-    {
-        [JsonProperty("Data", Required = Required.DisallowNull, NullValueHandling = NullValueHandling.Ignore)]
-        public required ICollection<RunkeeperActivity> Data { get; set; }
+//    public class RunkeeperActivityList
+//    {
+//        [JsonProperty("Data", Required = Required.DisallowNull, NullValueHandling = NullValueHandling.Ignore)]
+//        public required ICollection<RunkeeperActivity> Data { get; set; }
 
-        [JsonProperty("Cursor", Required = Required.DisallowNull, NullValueHandling = NullValueHandling.Ignore)]
-        public required RunkeeperCursorInfo Cursor { get; set; }
+//        [JsonProperty("Cursor", Required = Required.DisallowNull, NullValueHandling = NullValueHandling.Ignore)]
+//        public required RunkeeperCursorInfo Cursor { get; set; }
 
-        private System.Collections.Generic.IDictionary<string, object> _additionalProperties = new System.Collections.Generic.Dictionary<string, object>();
+//        private System.Collections.Generic.IDictionary<string, object> _additionalProperties = new System.Collections.Generic.Dictionary<string, object>();
 
-        [JsonExtensionData]
-        public System.Collections.Generic.IDictionary<string, object> AdditionalProperties
-        {
-            get { return _additionalProperties; }
-            set { _additionalProperties = value; }
-        }
-    }
+//        [JsonExtensionData]
+//        public System.Collections.Generic.IDictionary<string, object> AdditionalProperties
+//        {
+//            get { return _additionalProperties; }
+//            set { _additionalProperties = value; }
+//        }
+//    }
 
-    public class RunkeeperCursorInfo
-    {
-        /// <summary>Cursor for the last entry. Used to fetch next page when using cursor based pagination. Will be empty at EOF.</summary>
-        [Newtonsoft.Json.JsonProperty("Last", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public required string Last { get; set; }
+//    public class RunkeeperCursorInfo
+//    {
+//        / <summary>Cursor for the last entry.Used to fetch next page when using cursor based pagination.Will be empty at EOF.</summary>
+//        [Newtonsoft.Json.JsonProperty("Last", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+//        public required string Last { get; set; }
 
-        /// <summary>Only used by some endpoints. Bookmark to use to get the next page of hits. If 0, no more hits exists (EOF).</summary>
-        [Newtonsoft.Json.JsonProperty("Bookmark", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public long Bookmark { get; set; }
+//        / <summary>Only used by some endpoints.Bookmark to use to get the next page of hits.If 0, no more hits exists (EOF).</summary>
+//        [Newtonsoft.Json.JsonProperty("Bookmark", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+//        public long Bookmark { get; set; }
 
-        private System.Collections.Generic.IDictionary<string, object> _additionalProperties = new System.Collections.Generic.Dictionary<string, object>();
+//    private System.Collections.Generic.IDictionary<string, object> _additionalProperties = new System.Collections.Generic.Dictionary<string, object>();
 
-        [Newtonsoft.Json.JsonExtensionData]
-        public System.Collections.Generic.IDictionary<string, object> AdditionalProperties
-        {
-            get { return _additionalProperties; }
-            set { _additionalProperties = value; }
-        }
+//    [Newtonsoft.Json.JsonExtensionData]
+//    public System.Collections.Generic.IDictionary<string, object> AdditionalProperties
+//    {
+//        get { return _additionalProperties; }
+//        set { _additionalProperties = value; }
+//    }
 
-    }
+//}
     //generererat av code completion:
     //public class RunkeeperActivityFeed
     //{

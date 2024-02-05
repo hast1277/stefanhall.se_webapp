@@ -73,21 +73,11 @@
     </body>
 @code 
 {
-    public RunkeeperActivityList activities { get; set; }    
+    public List<RunkeeperActivity> activities { get; set; }    
     [Inject]
     public IRunkeeperService runkeeperService { get; set; }
 
-    protected override async Task OnInitializedAsync()
-    {
-        activities = await runkeeperService.GetAllActivities();
-    }
+    protected override async Task OnInitializedAsync() => activities = await runkeeperService.GetAllActivities();
 
- // HttpClient webClient = new HttpClient();
-    
-    //webClient.BaseAddress = new Uri("http:api.runkeeper.com/");
-    // webClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "9816c7b034ff44b6817e7c0d68bcb97f");
 
-    // string activitiesAsJson = webClient.GetStringAsync("fitnessActivities?pageSize=88").Result;
-
-    // List<RunkeeperActivity> activities = JsonAdapter.GetActivities(activitiesAsJson);
 }
