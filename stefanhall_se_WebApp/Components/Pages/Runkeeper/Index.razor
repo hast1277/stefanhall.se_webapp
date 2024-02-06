@@ -3,9 +3,10 @@
 @using System.Net.Http
 @using stefanhall_se_WebApp.Shared;
 @using stefanhall_se_WebApp.Services;
+@using System.Text.RegularExpressions;
 
 @* @attribute [RenderModeInteractiveServer] *@
-@rendermode InteractiveServer
+@* @rendermode InteractiveServer *@
 <h3>Runkeeper</h3>
     <body id="RunkeeperBody">
 
@@ -45,31 +46,24 @@
         <script src="/Scripts/bootstrap.min.js"></script>
         <!-- Script to Activate the Carousel -->
 
-@*         <script type="text/javascript">
-            $(document).ready(function () {
-                @foreach(var activityModel in Model) {
-                    string runKeeperId = Regex.Match(activityModel.uri, @"\d+").Value;
-            double dblMinutes = activityModel.Duration / 60;
-            int intMinutes = (int)Math.Floor(dblMinutes);
-            int seconds = activityModel.Duration % 60;
-            double dblKilometers = activityModel.total_distance / 1000;
-            //double dblPace = dblMinutes / dblKilometers;
-            int intPaceMinutes = (int)Math.Floor(activityModel.pace);
-            float fltPaceSeconds = activityModel.pace % 1;
-            int intPaceSeconds = (int)Math.Floor(fltPaceSeconds * 60);
-            int intKilometers = (int)Math.Floor(dblKilometers);
-            float meters = activityModel.total_distance % 1000;
-            string typeOfActivity = activityModel.type;
-            <Text>
-                $('.carousel-inner').append('<div class="item"><h2>@activityModel.start_time.ToString("dd MMM yyyy HH:mm").ToUpper()</h2> <b>Typ: </b>@typeOfActivity<br/><b>Sträcka: </b>@intKilometers km och @Math.Round(meters) meter<br /><b>Tid: </b>@intMinutes minuter och @seconds sekunder<br /><b>Tempo: </b>@intPaceMinutes minuter och @intPaceSeconds sekunder / km <br /><b>Förbrukade kalorier: </b>@activityModel.total_calories<br /><a href = "@Href("~/Runkeeper/Details/" + runKeeperId)">Karta</a></div>')
+        <script type="text/javascript">
+            $(document).ready(function () 
+            {
+                @foreach(var activityModel in activities) 
+                {
+                    string runKeeperId = Regex.Match(activityModel.ActivityId, @"\d+").Value;
+                    string? typeOfActivity = activityModel.Type;
+                    <Text>
+                        $('.carousel-inner').append('<div class="item"><h2>@activityModel.Date.ToString("dd MMM yyyy HH:mm").ToUpper()</h2> <b>Typ: </b>@activityModel.Type<br/><b>Sträcka: </b>@activityModel.Distance km <br /><b>Tid: </b>@activityModel.Duration <br /><b>Tempo: </b>@activityModel.AveragePace / km <br /><b>Förbrukade kalorier: </b>@activityModel.CaloriesBurned<br /><a href = "" + runKeeperId)">Karta</a></div>')
                     </Text>
+                }
 
-    
                 $('.item').first().addClass('active');
                 $('.carousel-indicators > li').first().addClass('active');
                 $('#carousel-example-generic').carousel();
-                });
-        </script> *@
+            });
+            
+        </script>
     </body>
 @code 
 {
