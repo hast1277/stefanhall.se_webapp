@@ -19,5 +19,18 @@
             List<RunkeeperActivity> records = csv.GetRecords<RunkeeperActivity>().ToList();
             return records;
         }
+
+        public async Task<List<RunkeeperDetails>> GetActivityDetails(string activityId)
+        {
+            RunkeeperDetails details = new RunkeeperDetails();
+            //string path = "..\\Data\\csv\\cardioDetails.csv";
+            string path = "Data\\csv\\cardioDetails.csv";
+            //string path = "C:\\Users\\halls\\source\\repos\\stefanhall_se_WebApp\\stefanhall_se_WebApp\\Data\\csv\\cardioDetails.csv";
+            StreamReader reader = new StreamReader(path);
+            CsvReader csv = new CsvReader(reader, CultureInfo.InvariantCulture);
+            List<RunkeeperDetails> records = csv.GetRecords<RunkeeperDetails>().ToList();
+            return records;
+        }
+        
     }
 }

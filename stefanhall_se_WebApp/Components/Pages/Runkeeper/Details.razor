@@ -1,9 +1,25 @@
 ﻿@page "/details"
 @page "/details/{_gpxFile}"
+@using stefanhall_se_WebApp.Shared;
+@using stefanhall_se_WebApp.Services;
 
 <h3>Details</h3>
 <p>@_gpxFile</p>
 @code {
     [ParameterAttribute]
     public string _gpxFile { get; set; }
+    
+    public List<RunkeeperDetails> activityDetails { get; set; }
+    [Inject]
+    public IRunkeeperService runkeeperService { get; set; }
+
+    protected override async Task OnInitializedAsync() => activityDetails = await runkeeperService.GetAllActivities();
+
+    // protected override Task OnInitializedAsync()
+    // {
+    //     if (_gpxFile == null)
+    //     {
+    //         _gpxFile = "No file selected";
+    //     }
+    // }
 }

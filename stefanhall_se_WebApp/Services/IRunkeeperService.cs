@@ -4,5 +4,7 @@
     public interface IRunkeeperService
     {
         Task<List<RunkeeperActivity>> GetAllActivities();
+        
+        Task<List<RunkeeperDetails>> GetActivityDetails(string activityId);
     }
 }
