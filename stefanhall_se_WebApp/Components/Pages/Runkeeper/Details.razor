@@ -1,0 +1,9 @@
+﻿@page "/details"
+@page "/details/{_gpxFile}"
+
+<h3>Details</h3>
+<p>@_gpxFile</p>
+@code {
+    [ParameterAttribute]
+    public string _gpxFile { get; set; }
+}

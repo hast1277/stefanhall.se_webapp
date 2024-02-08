@@ -54,7 +54,7 @@
                     string runKeeperId = Regex.Match(activityModel.ActivityId, @"\d+").Value;
                     string? typeOfActivity = activityModel.Type;
                     <Text>
-                        $('.carousel-inner').append('<div class="item"><h2>@activityModel.Date.ToString("dd MMM yyyy HH:mm").ToUpper()</h2> <b>Typ: </b>@activityModel.Type<br/><b>Sträcka: </b>@activityModel.Distance km <br /><b>Tid: </b>@activityModel.Duration <br /><b>Tempo: </b>@activityModel.AveragePace / km <br /><b>Förbrukade kalorier: </b>@activityModel.CaloriesBurned<br /><a href = "" + runKeeperId)">Karta</a></div>')
+                        $('.carousel-inner').append('<div class="item"><h2>@activityModel.Date.ToString("dd MMM yyyy HH:mm").ToUpper()</h2> <b>Typ: </b>@activityModel.Type<br/><b>Sträcka: </b>@activityModel.Distance km <br /><b>Tid: </b>@activityModel.Duration <br /><b>Tempo: </b>@activityModel.AveragePace / km <br /><b>Förbrukade kalorier: </b>@activityModel.CaloriesBurned<br /><a href = "@($"details/{@activityModel.GPXFile}")">Karta</a></div>')
                     </Text>
                 }
 

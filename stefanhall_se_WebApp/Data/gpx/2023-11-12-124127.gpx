@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx
+  version="1.1"
+  creator="Runkeeper - http://www.runkeeper.com"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"
+  xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1">
+<trk>
+  <name><![CDATA[Walking 11/12/23 12:41 pm]]></name>
+  <time>2023-11-12T11:41:27Z</time>
+<trkseg>
+<trkpt lat="57.700764000" lon="12.922745000"><ele>152.0</ele><time>2023-11-12T11:41:27Z</time></trkpt>
+<trkpt lat="57.700840000" lon="12.922656000"><ele>152.0</ele><time>2023-11-12T11:41:34Z</time></trkpt>
+<trkpt lat="57.700840000" lon="12.922656000"><ele>152.0</ele><time>2023-11-12T11:41:34Z</time></trkpt>
+</trkseg>
+</trk>
+</gpx>

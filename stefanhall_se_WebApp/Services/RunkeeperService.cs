@@ -11,7 +11,9 @@
         {
             RunkeeperActivity activity = new RunkeeperActivity();
             //string path = "..\\Data\\csv\\caridoActivities.csv";
-            string path = "C:\\Users\\halls\\source\\repos\\stefanhall_se_WebApp\\stefanhall_se_WebApp\\Data\\csv\\cardioActivities.csv";
+            string path = "Data\\csv\\cardioActivities.csv";
+            
+            //string path = "C:\\Users\\halls\\source\\repos\\stefanhall_se_WebApp\\stefanhall_se_WebApp\\Data\\csv\\cardioActivities.csv";
             StreamReader reader = new StreamReader(path);
             CsvReader csv = new CsvReader(reader, CultureInfo.InvariantCulture);
             List<RunkeeperActivity> records = csv.GetRecords<RunkeeperActivity>().ToList();
