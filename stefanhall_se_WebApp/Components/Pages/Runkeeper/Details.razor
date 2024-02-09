@@ -8,12 +8,12 @@
 @code {
     [ParameterAttribute]
     public string _gpxFile { get; set; }
-    
+
     public List<RunkeeperDetails> activityDetails { get; set; }
     [Inject]
     public IRunkeeperService runkeeperService { get; set; }
 
-    protected override async Task OnInitializedAsync() => activityDetails = await runkeeperService.GetAllActivities();
+    protected override async Task OnInitializedAsync() => activityDetails = await runkeeperService.GetActivityDetails(_gpxFile);
 
     // protected override Task OnInitializedAsync()
     // {

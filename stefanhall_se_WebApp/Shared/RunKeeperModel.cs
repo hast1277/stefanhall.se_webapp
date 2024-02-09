@@ -9,14 +9,10 @@ namespace stefanhall_se_WebApp.Shared
         {
             get { return "some text"; }
         }
-
-        public string? latHeader { get; set; }
-        public string? longHeader { get; set; }
-        public char separator1 { get; set; }
-        public char separator2 { get; set; }
-        public char separator3 { get; set; }
         public string? latitude { get; set; }
         public string? longitude { get; set; }
+        public string? elevation { get; set; }
+        public DateTime time { get; set; }
     }
     public class RunkeeperActivity
     {
